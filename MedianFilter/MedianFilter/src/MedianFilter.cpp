@@ -8,10 +8,10 @@ int median(uchar*, int);
 void insertionSort(uchar*, int);
 
 int main() {
-	cv::Mat original = cv::imread("resources\\lena.png", cv::IMREAD_GRAYSCALE);
+	cv::Mat original = cv::imread("resources\\lena_high_noise.png", cv::IMREAD_GRAYSCALE);
 
 	cv::Mat medianImage(original.rows, original.cols, original.type());
-	medianFilter(&original, &medianImage, 5);
+	medianFilter(&original, &medianImage, 3);
 
 	cv::imshow("Original Image", original);
 	cv::imshow("Median Image", medianImage);
