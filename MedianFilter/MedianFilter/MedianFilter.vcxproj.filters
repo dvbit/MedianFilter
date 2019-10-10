@@ -19,4 +19,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="resources\lena.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\lena_high_noise.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
 </Project>
