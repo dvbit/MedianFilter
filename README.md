@@ -5,7 +5,7 @@ Here are some examples.\
 <p align="center">
   <img src="MedianFilter/MedianFilter/resources/lena.png" title="Lena">
   <img src="MedianFilter/MedianFilter/output/lena_high_noise_median.png" alt="Lena Filtered">
-</p>
+</p>\
 
 <p align="center">
   <img src="MedianFilter/MedianFilter/resources/lena_high_noise.png" title="Lena High Noise">
