@@ -8,6 +8,6 @@ Here are some examples.
 </p></br>
 
 <p align="center">
-  <img src="MedianFilter/MedianFilter/resources/lena_high_noise.png" width="350" title="Lena High Noise">
-  <img src="MedianFilter/MedianFilter/output/lena_high_noise_median.png" width="350" alt="Lena High Noise Filtered">
+  <img src="MedianFilter/MedianFilter/resources/lena_high_noise.png" width="400" title="Lena High Noise">
+  <img src="MedianFilter/MedianFilter/output/lena_high_noise_median.png" width="400" alt="Lena High Noise Filtered">
 </p>
