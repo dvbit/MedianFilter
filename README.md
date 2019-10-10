@@ -3,4 +3,7 @@ My implementation of the median filter image processing algorithm. I used OpenCV
 
 Here are some examples.\
 ![Lena](MedianFilter/MedianFilter/resources/lena.png)
-![Lena Filtered](MedianFilter/MedianFilter/output/lena_median.png)
+![Lena Filtered](MedianFilter/MedianFilter/output/lena_median.png)\
+
+![Lena High Noise](MedianFilter/MedianFilter/resources/lena_high_noise.png)
+![Lena High Noise Filtered](MedianFilter/MedianFilter/output/lena_high_noise_median.png)\
