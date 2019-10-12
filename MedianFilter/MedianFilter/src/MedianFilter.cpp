@@ -2,16 +2,16 @@
 #include "opencv2/core.hpp"
 #include "opencv2/opencv.hpp"
 
-void medianFilter(cv::Mat*, cv::Mat*, int);
+void medianFilter(cv::Mat&, cv::Mat&, int);
 bool inBounds(int, int, int, int);
 int median(uchar*, int);
 void insertionSort(uchar*, int);
 
 int main() {
-	cv::Mat original = cv::imread("resources\\lena_high_noise.png", cv::IMREAD_GRAYSCALE);
+	cv::Mat original = cv::imread("resources\\lena.png", cv::IMREAD_GRAYSCALE);
 
 	cv::Mat medianImage(original.rows, original.cols, original.type());
-	medianFilter(&original, &medianImage, 3);
+	medianFilter(original, medianImage, 3);
 
 	cv::imshow("Original Image", original);
 	cv::imshow("Median Image", medianImage);
@@ -21,22 +21,22 @@ int main() {
 	return 0;
 }
 
-void medianFilter(cv::Mat* src, cv::Mat* dst, int kernelSize) {
+void medianFilter(cv::Mat& src, cv::Mat& dst, int kernelSize) {
 	uchar* values = new uchar[kernelSize*kernelSize];
-	for (int r = 0; r < src->rows; r++) {
-		for (int c = 0; c < src->cols; c++) {
+	for (int r = 0; r < src.rows; r++) {
+		for (int c = 0; c < src.cols; c++) {
 			int halfKernelSize = kernelSize / 2;
 			for (int i = -halfKernelSize, index = 0; i <= halfKernelSize; i++) {
 				for (int j = -halfKernelSize; j <= halfKernelSize; j++, index++) {
-					if (!inBounds(r + i, c + j, src->rows, src->cols)) {
+					if (!inBounds(r + i, c + j, src.rows, src.cols)) {
 						values[index] = 0;
 					}
 					else {
-						values[index] = src->at<uchar>(r + i, c + j);
+						values[index] = src.at<uchar>(r + i, c + j);
 					}
 				}
 			}
-			dst->at<uchar>(r, c) = median(values, kernelSize*kernelSize);
+			dst.at<uchar>(r, c) = median(values, kernelSize*kernelSize);
 		}
 	}
 	delete[] values;
